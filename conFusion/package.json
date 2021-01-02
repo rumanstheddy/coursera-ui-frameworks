@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-react": "^7.22.0",
     "lite-server": "^2.3.0"
   },
   "dependencies": {
