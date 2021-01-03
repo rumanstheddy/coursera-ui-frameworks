@@ -137,8 +137,8 @@
       <div class="container">
         <div class="row row-header">
           <div class="col-12 col-sm-6">
-            <h1>Ristorante con Fusion</h1>
-            <p>
+            <h1 class="heading-text">Ristorante con Fusion</h1>
+            <p class="heading-text">
               We take inspiration from the World's best cuisines, and create a
               unique fusion experience. Our lipsmacking creations will tickle
               your culinary senses!
@@ -151,15 +151,177 @@
               </div>
               <div class="col-sm-6 align-self-center">
                 <a
+                  data-toggle="modal"
+                  data-target="#reserveTableModal"
                   role="button"
                   class="btn btn-block nav-link btn-warning"
-                  data-toggle="tooltip"
                   data-html="true"
-                  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                  data-placement="bottom"
                   href="#reserveform"
                   >Reserve Table</a
                 >
+              </div>
+            </div>
+          </div>
+          <div id="reserveTableModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Reserve a Table</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row form-group">
+                      <div class="col-sm-3">
+                        <label for="inlineRadio1"> Number of guests </label>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio1"
+                            value="option1"
+                          />
+                          <label class="form-check-label" for="inlineRadio1"
+                            >1</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio2"
+                            value="option2"
+                          />
+                          <label class="form-check-label" for="inlineRadio2"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio3"
+                            value="option3"
+                          />
+                          <label class="form-check-label" for="inlineRadio3"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio4"
+                            value="option4"
+                          />
+                          <label class="form-check-label" for="inlineRadio4"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio5"
+                            value="option5"
+                          />
+                          <label class="form-check-label" for="inlineRadio5"
+                            >5</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio6"
+                            value="option6"
+                          />
+                          <label class="form-check-label" for="inlineRadio6"
+                            >6</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-sm-3">
+                        <label for="staticEmail">Section</label>
+                      </div>
+                      <div class="col-sm-5">
+                        <div
+                          class="btn-group btn-group-toggle"
+                          data-toggle="buttons"
+                        >
+                          <label class="btn btn-success">
+                            <input
+                              type="radio"
+                              name="options"
+                              id="option1"
+                              autocomplete="off"
+                              checked
+                            />
+                            Non-smoking
+                          </label>
+                          <label class="btn btn-danger">
+                            <input
+                              type="radio"
+                              name="options"
+                              id="option2"
+                              autocomplete="off"
+                            />
+                            Smoking
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-sm-3">
+                        <label for="staticEmail">Date and Time</label>
+                      </div>
+                      <div class="col-sm-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Date"
+                        />
+                      </div>
+                      <div class="col-sm-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Time"
+                        />
+                      </div>
+                      <div class="col-sm-3"></div>
+                    </div>
+                    <div class="row pt-3" id="cancelBtnGroup">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-3">
+                        <button
+                          type="submit"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                          Submit
+                        </button>
+                      </div>
+                      <div class="col-sm-6"></div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
