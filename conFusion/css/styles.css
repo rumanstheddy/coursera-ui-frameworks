@@ -22,6 +22,13 @@
   background: #9575cd;
 }
 
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
 .heading-text {
   color: floralwhite;
 }
