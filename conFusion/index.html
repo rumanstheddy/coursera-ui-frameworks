@@ -67,9 +67,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
-              <span class="fa fa-sign-in"></span> Login</a
-            >
+            <a id="loginLink"> <span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
@@ -151,11 +149,9 @@
               </div>
               <div class="col-sm-6 align-self-center">
                 <a
-                  data-toggle="modal"
-                  data-target="#reserveTableModal"
                   role="button"
                   class="btn btn-block nav-link btn-warning"
-                  data-html="true"
+                  id="reserveTableBtn"
                   href="#reserveform"
                   >Reserve Table</a
                 >
@@ -315,7 +311,7 @@
                           Cancel
                         </button>
                         <button type="submit" class="btn btn-primary">
-                          Submit
+                          Reserve
                         </button>
                       </div>
                       <div class="col-sm-6"></div>
@@ -662,8 +658,7 @@
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
-      });
-      $(document).ready(function () {
+
         $("#carouselButton").click(function () {
           if ($("#carouselButton").children("span").hasClass("fa-pause")) {
             $("#mycarousel").carousel("pause");
@@ -676,6 +671,16 @@
             $("#carouselButton").children("span").removeClass("fa-play");
             $("#carouselButton").children("span").addClass("fa-pause");
           }
+        });
+
+        // Code which makes the login Modal toggle in jQuery
+        $("#loginLink").click(function () {
+          $("#loginModal").modal("toggle");
+        });
+
+        // Code which makes the reserve table Modal toggle in jQuery
+        $("#reserveTableBtn").click(function () {
+          $("#reserveTableModal").modal("toggle");
         });
       });
     </script>
