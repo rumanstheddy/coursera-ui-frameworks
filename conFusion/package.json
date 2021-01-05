@@ -4,10 +4,12 @@
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,9 @@
     "eslint": "^7.16.0",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-react": "^7.22.0",
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
